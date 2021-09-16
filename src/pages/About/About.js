@@ -1,12 +1,17 @@
 import React from 'react'
 const About = () => {
-  return (
+    return (
     <div className="container">
-    
-      <h1 className="text-center" style={{paddingTop: "30%"}}>
-        About
-      </h1>
-      
+      <div id="crt">
+        <div id="screen">
+          <div id="wrapper">
+              <div id="interlace"></div>
+              <div id="scanline"></div>
+              <div id="envelope"></div>
+          </div>
+          <h1>About</h1>
+        </div>
+      </div>
     </div>
   )
 }

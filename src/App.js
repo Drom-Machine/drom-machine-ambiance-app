@@ -6,38 +6,42 @@ import {
   Switch
 } from 'react-router-dom';
 
+import './App.scss';
+
 import About from './pages/About/About';
-import Contact from './pages/Contact/Contact';
+import SignIn from './pages/Auth/SignIn';
 import Home from './pages/Home/Home';
-import Services from './pages/Video/VideoPlayer';
-import Testimonial from './pages/Playlist/Playlist';
+import VideoPlayer from './pages/Video/VideoPlayer';
+import Playlist from './pages/Playlist/Playlist';
 import Navbar from './Components/Navbar/Navbar';
 
 const App = () => {
   return (
-   <Router>
-    <Navbar/>
-    <main>
-      <Switch>
-        <Route path="/" exact>
-          <Home/>
-        </Route>
-        <Route path="/about" exact>
-          <About/>
-        </Route>
-        <Route path="/service" exact>
-          <Services/>
-        </Route>
-        <Route path="/testimonial" exact>
-          <Testimonial/>
-        </Route>
-        <Route path="/contact" exact>
-          <Contact/>
-        </Route>
-        <Redirect to="/" />
-      </Switch>
-    </main>
-   </Router>
+    <>
+      <Router>
+        <Navbar/>
+        <main>
+          <Switch>
+            <Route path="/" exact>
+              <Home/>
+            </Route>
+            <Route path="/about" exact>
+              <About/>
+            </Route>
+            <Route path="/VideoPlayer" exact>
+              <VideoPlayer/>
+            </Route>
+            <Route path="/Playlist" exact>
+              <Playlist/>
+            </Route>
+            <Route path="/SignIn" exact>
+              <SignIn/>
+            </Route>
+            <Redirect to="/" />
+          </Switch>
+        </main>
+      </Router>
+    </>
   );
 }
 
